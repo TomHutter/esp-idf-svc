@@ -41,6 +41,7 @@ pub(crate) struct TlsPsk {
 /// Dummy for maintaining the same internal interface whether TLS PSK support is enabled or not.
 #[cfg(not(all(esp_idf_esp_tls_psk_verification, feature = "alloc")))]
 #[allow(dead_code)]
+#[derive(Debug)]
 pub(crate) struct TlsPsk {}
 
 #[cfg(all(esp_idf_esp_tls_psk_verification, feature = "alloc"))]
