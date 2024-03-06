@@ -350,6 +350,7 @@ impl<'a> UnsafeCallback<'a> {
     }
 }
 
+#[derive(Debug)]
 pub struct EspMqttClient<'a> {
     raw_client: esp_mqtt_client_handle_t,
     _boxed_raw_callback: Box<dyn FnMut(esp_mqtt_event_handle_t) + Send + 'a>,
